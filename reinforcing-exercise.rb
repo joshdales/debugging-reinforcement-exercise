@@ -1,22 +1,28 @@
 class Person
 
-  def initailize
-    emotions = {
-      fear: 1,
+  def initialize
+    @emotions = {
       anger: 1,
-      sadness: 1,
-      joy: 3,
-      disgust: 1,
-      suprise: 2,
-      trust: 2,
-      anticipation: 2
+      sadness: 2,
+      joy: 3
     }
   end
 
-  def levels
-    high = 3
-    medium = 2
-    low = 1
+  def emotion_level
+    @emotions.each do |feeling, level|
+      if feeling == 1
+        "I am feeling a low ammount of #{feeling}"
+      elsif feeling == 2
+        "I am feeling a medium ammount of #{feeling}"
+      elsif feeling == 3
+        "I am feeling a high ammount of #{feeling}"
+      end
+    end
   end
 
 end
+
+person = Person.new
+puts person.inspect
+
+puts person.emotion_level
