@@ -10,12 +10,12 @@ class Person
 
   def emotion_level
     @emotions.each do |feeling, level|
-      if feeling == 1
-        "I am feeling a low ammount of #{feeling}"
-      elsif feeling == 2
-        "I am feeling a medium ammount of #{feeling}"
-      elsif feeling == 3
-        "I am feeling a high ammount of #{feeling}"
+      if level == 1
+        puts "I am feeling a low ammount of #{feeling}"
+      elsif level == 2
+        puts "I am feeling a medium ammount of #{feeling}"
+      elsif level == 3
+        puts "I am feeling a high ammount of #{feeling}"
       end
     end
   end
